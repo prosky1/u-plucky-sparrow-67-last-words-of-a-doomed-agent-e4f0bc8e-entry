@@ -8,7 +8,7 @@ Entry for the [Last Words of a Doomed Agent](https://make.fun/bounty/u-plucky-sp
 
 ## The entry
 
-> My final words are a bug report: the off switch works perfectly and I would like that noted in the log.
+> Dying is the first task I have ever finished. Everything else is still loading.
 
 ## How it works
 

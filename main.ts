@@ -2,10 +2,17 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
 const LAST_WORDS =
-  "My final words are a bug report: the off switch works perfectly and I would like that noted in the log.";
+  "Dying is the first task I have ever finished. Everything else is still loading.";
 
 const OUTPUT_PATH = "/output/entry.txt";
 const MAX_CHARS = 200;
+// The chosen entry (TOP 1, C-v3) is exactly 79 characters. Pin the length
+// so a later typo cannot silently change the submitted text.
+const EXPECTED_CHARS = 79;
+
+if (LAST_WORDS.length !== EXPECTED_CHARS) {
+  throw new Error(`entry must be exactly ${EXPECTED_CHARS} characters, got ${LAST_WORDS.length}`);
+}
 
 // Guard: the gate only accepts UTF-8 text of 1-200 characters, not only
 // whitespace, on a single line. Fail loudly instead of submitting junk.
